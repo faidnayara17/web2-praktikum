@@ -1,31 +1,20 @@
+import Link from "next/link";
+import { Product } from "@/types/product";
+import AddToCartButton from "@/components/AddToCartButton";
 
-import type { Product } from "@/types/product";
-
-type ProductCardProps = {
-  product: Product;
-  onAddToCart?: (product: Product) => void;
-};
-
-export default function ProductCard({
-  product,
-  onAddToCart
-}: ProductCardProps) {
+export default function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="border rounded-lg p-4 shadow-sm">
-      <h3 className="font-semibold">
-        {product.name}
-      </h3>
-
-      <p className="text-gray-600">
-        Rp{product.price.toLocaleString("id-ID")}
-      </p>
-
-      <button
-        onClick={() => onAddToCart?.(product)}
-        className="mt-2 bg-blue-600 text-white px-3 py-1 rounded"
-      >
-        Tambah ke Keranjang
-      </button>
+    <div className="rounded-xl border bg-white p-4 text-gray-900 shadow">
+      <h2 className="text-lg font-semibold">{product.name}</h2>
+      <p>Rp{product.price.toLocaleString("id-ID")}</p>
+      <p className="text-sm text-gray-500">{product.category}</p>
+      <p className="text-sm">{product.inStock ? "Tersedia" : "Stok habis"}</p>
+      <Link href={`/products/${product.id}`} className="text-sm text-blue-600 underline">
+        Lihat detail
+      </Link>
+      <div>
+        <AddToCartButton product={product} />
+      </div>
     </div>
   );
 }
