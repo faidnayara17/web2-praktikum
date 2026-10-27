@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { products } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
+import type { Product } from "@/types/product";
 
-export default function ProductCatalog() {
+// Data diterima lewat props dari Server Component (halaman),
+// karena product-store.ts hanya boleh dipakai di server.
+export default function ProductCatalog({ products }: { products: Product[] }) {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("Semua");
 

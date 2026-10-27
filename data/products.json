@@ -1,0 +1,79 @@
+[
+  {
+    "id": "1",
+    "name": "Kopi Toraja",
+    "description": "Kopi lokal kemasan 250 gram dengan aroma khas.",
+    "price": 85000,
+    "category": "Minuman"
+  },
+  {
+    "id": "2",
+    "name": "Keripik Pisang",
+    "description": "Keripik pisang renyah produksi UMKM lokal.",
+    "price": 25000,
+    "category": "Makanan"
+  },
+  {
+    "id": "3",
+    "name": "Sambal UMKM",
+    "description": "Sambal rumahan dengan cita rasa khas.",
+    "price": 30000,
+    "category": "Makanan"
+  },
+  {
+    "id": "4",
+    "name": "Sirup Markisa",
+    "description": "Sirup markisa segar tanpa pengawet, cocok untuk minuman dingin.",
+    "price": 32000,
+    "category": "Minuman"
+  },
+  {
+    "id": "5",
+    "name": "Tas Anyaman",
+    "description": "Tas buatan tangan dengan desain sederhana.",
+    "price": 95000,
+    "category": "Kerajinan"
+  },
+  {
+    "id": "6",
+    "name": "Kain Tenun Sutra",
+    "description": "Kain tenun sutra motif tradisional buatan pengrajin Sulawesi.",
+    "price": 350000,
+    "category": "Kerajinan"
+  },
+  {
+    "id": "7",
+    "name": "Tempat Pensil Kayu",
+    "description": "Tempat alat tulis berbahan kayu.",
+    "price": 35000,
+    "category": "Kerajinan"
+  },
+  {
+    "id": "8",
+    "name": "Dompet Kulit",
+    "description": "Dompet praktis untuk penggunaan sehari-hari.",
+    "price": 65000,
+    "category": "Aksesori"
+  },
+  {
+    "id": "9",
+    "name": "Gelang Handmade",
+    "description": "Gelang sederhana hasil karya pengrajin lokal.",
+    "price": 25000,
+    "category": "Aksesori"
+  },
+  {
+    "id": "10",
+    "name": "Gantungan Kunci Perahu Pinisi",
+    "description": "Souvenir miniatur perahu pinisi dari kayu, ringan dan unik.",
+    "price": 15000,
+    "category": "Aksesori"
+  },
+  {
+    "id": "11",
+    "name": "Sabun Kelapa Alami",
+    "description": "Sabun batang dari minyak kelapa, lembut untuk kulit sensitif.",
+    "price": 22000,
+    "category": "Perawatan Tubuh"
+  }
+]

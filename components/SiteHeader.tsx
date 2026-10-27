@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+const navItems = [
+  { href: "/", label: "Beranda" },
+  { href: "/produk", label: "Produk" },
+  { href: "/about", label: "Tentang" },
+];
+
 export default function SiteHeader() {
   return (
     <header className="border-b border-slate-200 bg-white">
@@ -8,18 +14,15 @@ export default function SiteHeader() {
           UMKM Digital Store
         </Link>
         <nav aria-label="Navigasi utama" className="flex gap-5">
-          <a
-            href="#katalog"
-            className="text-sm font-medium text-slate-600 hover:text-blue-700"
-          >
-            Katalog Produk
-          </a>
-          <Link
-            href="/about"
-            className="text-sm font-medium text-slate-600 hover:text-blue-700"
-          >
-            Tentang
-          </Link>
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium text-slate-600 hover:text-blue-700"
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>

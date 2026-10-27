@@ -1,10 +1,12 @@
 export type Product = {
-  id: number;
+  id: string;
   name: string;
   description: string;
   price: number;
   category: string;
 };
+
+export type ProductInput = Omit<Product, "id">;
 
 export interface CartItem {
   product: Product;
@@ -17,4 +19,4 @@ export type ProductDraft = Partial<Product>;
 
 export type ProductUpdate = Omit<Product, "id">;
 
-export type ProductMap = Record<number, Product>;
+export type ProductMap = Record<string, Product>;
