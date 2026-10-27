@@ -8,7 +8,11 @@ async function ProductDetail({ id }: { id: string }) {
   return (
     <div>
       <h1 className="text-2xl font-bold">{product.name}</h1>
-      <p>Rp{product.price.toLocaleString("id-ID")}</p>
+      <p className="text-sm text-gray-500">{product.category}</p>
+      <p className="mt-2">{product.description}</p>
+      <p className="mt-2 font-semibold">
+        Rp{product.price.toLocaleString("id-ID")}
+      </p>
     </div>
   );
 }

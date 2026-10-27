@@ -1,11 +1,10 @@
-
-export interface Product {
-  id: string;
+export type Product = {
+  id: number;
   name: string;
+  description: string;
   price: number;
-  category: "electronics" | "fashion" | "food";
-  inStock: boolean;
-}
+  category: string;
+};
 
 export interface CartItem {
   product: Product;
@@ -18,4 +17,4 @@ export type ProductDraft = Partial<Product>;
 
 export type ProductUpdate = Omit<Product, "id">;
 
-export type ProductMap = Record<string, Product>;
+export type ProductMap = Record<number, Product>;
