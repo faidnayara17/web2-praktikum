@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+<<<<<<< HEAD
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
@@ -17,6 +18,17 @@
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "zod": "^3.25.76"
+=======
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "16.3.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+>>>>>>> b17e8dcd5fefad888ae81c5203323952f8df2a67
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -25,9 +37,13 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
+<<<<<<< HEAD
     "prisma": "^6.19.3",
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
+=======
+    "tailwindcss": "^4",
+>>>>>>> b17e8dcd5fefad888ae81c5203323952f8df2a67
     "typescript": "^5"
   }
 }
