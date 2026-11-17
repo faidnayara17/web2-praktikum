@@ -26,3 +26,6 @@ export const productSchema = z.object({
 });
 
 export type ProductFormValues = z.infer<typeof productSchema>;
+
+// Nama tipe sesuai Modul 6; isinya sama dengan ProductFormValues.
+export type ProductInput = ProductFormValues;

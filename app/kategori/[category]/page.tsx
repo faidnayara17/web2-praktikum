@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-﻿import Link from "next/link";
-=======
 import Link from "next/link";
->>>>>>> b17e8dcd5fefad888ae81c5203323952f8df2a67
 import { notFound } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
 import { getProducts } from "@/lib/product-store";
 
-<<<<<<< HEAD
 export const runtime = "nodejs";
 
-=======
->>>>>>> b17e8dcd5fefad888ae81c5203323952f8df2a67
 export const dynamic = "force-dynamic";
 
 export default async function KategoriPage({
@@ -20,17 +13,9 @@ export default async function KategoriPage({
   params: Promise<{ category: string }>;
 }) {
   const { category: encodedCategory } = await params;
-<<<<<<< HEAD
-
   const category = decodeURIComponent(encodedCategory);
 
   const products = await getProducts();
-
-=======
-  const category = decodeURIComponent(encodedCategory);
-
-  const products = await getProducts();
->>>>>>> b17e8dcd5fefad888ae81c5203323952f8df2a67
   const filteredProducts = products.filter(
     (product) =>
       product.category.toLocaleLowerCase("id-ID") ===
@@ -42,11 +27,7 @@ export default async function KategoriPage({
   }
 
   return (
-<<<<<<< HEAD
-    <main className="mx-auto max-w-6xl p-6">
-=======
     <main className="mx-auto w-full max-w-6xl p-6">
->>>>>>> b17e8dcd5fefad888ae81c5203323952f8df2a67
       <Link href="/produk" className="text-blue-700 underline">
         Kembali ke katalog
       </Link>

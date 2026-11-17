@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-﻿import Link from "next/link";
-=======
 import Link from "next/link";
->>>>>>> b17e8dcd5fefad888ae81c5203323952f8df2a67
 import type { Product } from "@/types/product";
 
 type ProductCardProps = {
@@ -17,7 +13,6 @@ export default function ProductCard({ product }: ProductCardProps) {
   }).format(product.price);
 
   return (
-<<<<<<< HEAD
     <article className="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md">
       <div
         aria-hidden="true"
@@ -27,9 +22,12 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
 
       <div className="flex flex-1 flex-col p-5">
-        <span className="mb-2 w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
+        <Link
+          href={`/kategori/${encodeURIComponent(product.category)}`}
+          className="mb-2 w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700 hover:bg-blue-100"
+        >
           {product.category}
-        </span>
+        </Link>
 
         <h2 className="text-lg font-semibold leading-snug text-slate-900">
           {product.name}
@@ -53,26 +51,6 @@ export default function ProductCard({ product }: ProductCardProps) {
           className="mt-4 inline-block text-sm font-semibold text-blue-700 underline"
         >
           Lihat detail
-=======
-    <article className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-5 text-slate-900 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-      <Link
-        href={`/kategori/${encodeURIComponent(product.category)}`}
-        className="mb-3 w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700 hover:bg-blue-100"
-      >
-        {product.category}
-      </Link>
-      <h3 className="text-lg font-semibold">{product.name}</h3>
-      <p className="mt-2 flex-1 text-sm leading-6 text-slate-600">
-        {product.description}
-      </p>
-      <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-        <p className="text-lg font-bold text-blue-700">{formattedPrice}</p>
-        <Link
-          href={`/produk/${product.id}`}
-          className="text-sm font-medium text-slate-500 hover:text-blue-700"
-        >
-          Lihat detail →
->>>>>>> b17e8dcd5fefad888ae81c5203323952f8df2a67
         </Link>
       </div>
     </article>

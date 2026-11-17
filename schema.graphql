@@ -1,0 +1,72 @@
+# ---------------------------------------------------------------
+# Referensi konseptual (Modul 6, Langkah 5) -- TIDAK dijalankan.
+# Praktikum tidak membangun server GraphQL; file ini hanya untuk
+# memahami tipe, Query, Mutation, dan pemilihan field.
+#
+# Disesuaikan dengan model Product pada proyek ini (ada description
+# dan category, sama seperti tabel `products` di Prisma).
+# `!` berarti nilai tidak boleh null.
+# ---------------------------------------------------------------
+
+type Product {
+  id: ID!
+  name: String!
+  description: String!
+  price: Float!
+  category: String!
+}
+
+# Query = membaca data
+type Query {
+  products: [Product!]!
+  product(id: ID!): Product
+}
+
+# Mutation = mengubah data
+type Mutation {
+  addProduct(
+    name: String!
+    description: String!
+    price: Float!
+    category: String!
+  ): Product!
+}
+
+# ---------------------------------------------------------------
+# Contoh operasi (dipakai client, bukan bagian skema)
+#
+# 1) Client hanya meminta NAMA produk (tanpa price/category/dll):
+#
+#   query {
+#     products {
+#       name
+#     }
+#   }
+#
+#   Respons: { "data": { "products": [ { "name": "Kopi Toraja" }, ... ] } }
+#   Bandingkan dengan REST GET /api/products yang SELALU mengembalikan
+#   seluruh objek (id, name, description, price, category).
+#
+# 2) Satu produk, hanya field yang dibutuhkan:
+#
+#   query {
+#     product(id: "abc123") {
+#       name
+#       price
+#     }
+#   }
+#
+# 3) Menambah produk, dan meminta kembali id + name saja:
+#
+#   mutation {
+#     addProduct(
+#       name: "Kopi Arabika"
+#       description: "Kopi arabika sangrai medium 200 gram."
+#       price: 75000
+#       category: "Minuman"
+#     ) {
+#       id
+#       name
+#     }
+#   }
+# ---------------------------------------------------------------

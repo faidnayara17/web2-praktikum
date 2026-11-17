@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-﻿import Link from "next/link";
-=======
 import Link from "next/link";
 
 const navItems = [
@@ -8,7 +5,6 @@ const navItems = [
   { href: "/produk", label: "Produk" },
   { href: "/about", label: "Tentang" },
 ];
->>>>>>> b17e8dcd5fefad888ae81c5203323952f8df2a67
 
 export default function SiteHeader() {
   return (
@@ -17,22 +13,6 @@ export default function SiteHeader() {
         <Link href="/" className="text-xl font-bold text-blue-700">
           UMKM Digital Store
         </Link>
-<<<<<<< HEAD
-
-        <nav aria-label="Navigasi utama" className="flex gap-5">
-          <Link
-            href="/"
-            className="text-sm font-medium text-slate-600 hover:text-blue-700"
-          >
-            Beranda
-          </Link>
-          <Link
-            href="/produk"
-            className="text-sm font-medium text-slate-600 hover:text-blue-700"
-          >
-            Produk
-          </Link>
-=======
         <nav aria-label="Navigasi utama" className="flex gap-5">
           {navItems.map((item) => (
             <Link
@@ -43,7 +23,6 @@ export default function SiteHeader() {
               {item.label}
             </Link>
           ))}
->>>>>>> b17e8dcd5fefad888ae81c5203323952f8df2a67
         </nav>
       </div>
     </header>
